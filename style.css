@@ -8,6 +8,8 @@
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
+
+    font-family: 'Source Code Pro', monospace;
 }
 
 *::-webkit-scrollbar {
@@ -54,4 +56,44 @@ main {
     list-style: none;
     
     margin-left: 10%;
+}
+
+.welcome {
+    height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome p {
+    overflow: hidden;
+    border-right: 0.15rem solid red;
+    background-color: black;
+    color: white;
+
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.2rem;
+    max-width: 8.6rem;
+
+    animation: letters 5s steps(100, end),
+    cursorBlink 1s step-end infinite;
+}
+
+@keyframes letters {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes cursorBlink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: red;
+    }
 }
