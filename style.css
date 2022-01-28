@@ -56,6 +56,7 @@ main {
     list-style: none;
     
     margin-left: 10%;
+    padding: 1%;
 }
 
 .welcome {
@@ -96,4 +97,16 @@ main {
     50% {
         border-color: red;
     }
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
