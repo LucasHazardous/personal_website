@@ -6,6 +6,8 @@ const aboutBtn = document.getElementById("aboutBtn");
 const home = document.getElementById("home");
 const about = document.getElementById("about");
 
+about.disabled = true;
+
 //get canvas
 const pyramid = document.getElementById("pyramid");
 
@@ -42,7 +44,7 @@ function pyramidDraw(a, x, y) {
 
 //function for drawing a single triangle on a canvas
 function triangle(x, y) {
-    ctx.fillStyle = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+    ctx.fillStyle = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.4)`;
     ctx.beginPath();
     ctx.moveTo(x, y);
     ctx.lineTo(x+size, y);
