@@ -59,14 +59,14 @@ main {
     padding: 1%;
 }
 
-.welcome {
+#home {
     height: 88vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.welcome p {
+#home p {
     overflow: hidden;
     border-right: 0.15rem solid red;
     background-color: black;

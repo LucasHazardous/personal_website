@@ -6,26 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <main>
         <div class="bar">
             <img src="./assets/logo.png" alt="logo" id="logo">
             <ul class="options">
-                <li><button id="home">Home</button></li>
-                <li><button id="about">About</button></li>
-                <li><button id="pyramid">Pyramid</button></li>
+                <li><button id="homeBtn">Home</button></li>
+                <li><button id="aboutBtn">About</button></li>
                 <li><a target="_blank" href="https://www.pexels.com/photo/silhouette-of-mountain-hill-with-pine-trees-under-white-cloud-blue-sky-707344/"><button>Background</button></a></li>
             </ul>
         </div>
 
         <div class="content">
-            <div class="welcome">
+            <div id="home">
                 <p>Hello there</p>
+                <div id="about">
+                    <canvas id="pyramid" width="400" height="200" style="background-color: azure;"></canvas>
+                </div>
             </div>
-            <div class="about">
-
-            </div>
+            
         </div>
         <footer></footer>
     </main>
