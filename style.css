@@ -87,6 +87,17 @@ main {
     cursorBlink 1s step-end infinite;
 }
 
+#about p {
+    margin-left: 80%;
+    
+    background-color: black;
+    color: white;
+
+    margin: 0 auto;
+    letter-spacing: 0.2rem;
+    max-width: 90rem;
+}
+
 @keyframes letters {
     from {
         width: 0%;
@@ -120,4 +131,5 @@ button {
 #about {
     height: 50vh;
     text-align: center;
+    visibility: hidden;
 }

@@ -6,8 +6,6 @@ const aboutBtn = document.getElementById("aboutBtn");
 const home = document.getElementById("home");
 const about = document.getElementById("about");
 
-about.disabled = true;
-
 //get canvas
 const pyramid = document.getElementById("pyramid");
 
