@@ -18,14 +18,36 @@ const size = 10;
 //current opened section
 var opened = "home";
 
+//pyramid opacity interval
+var interval;
+
+//current opacity
+var opacity = 0.4;
+
+//current level of pyramid
+var level = 0;
+
 //about button functionality
-aboutBtn.addEventListener("click", (e) => {
+aboutBtn.addEventListener("click", () => {
     if(opened === "home") {
         home.style.visibility = "hidden";
         about.style.visibility = "visible";
         opened = "about";
 
+        opacity = 0.4;
         pyramidDraw(5, 0, 280);
+
+        interval = setInterval(() => {
+            if(level == 6) {
+                ctx.clearRect(0, 0, pyramid.width, pyramid.height);
+                opacity = 0.4;
+                pyramidDraw(5, 0, 280);
+                level = 0; 
+            }
+            opacity = 1;
+            pyramidDraw(level, 0, 280);
+            level++;
+        }, 1000);
     }
 });
 
@@ -42,7 +64,7 @@ function pyramidDraw(a, x, y) {
 
 //function for drawing a single triangle on a canvas
 function triangle(x, y) {
-    ctx.fillStyle = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.4)`;
+    ctx.fillStyle = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, ${opacity})`;
     ctx.beginPath();
     ctx.moveTo(x, y);
     ctx.lineTo(x+size, y);
@@ -51,10 +73,11 @@ function triangle(x, y) {
 }
 
 //home button functionality
-homeBtn.addEventListener("click", (e) => {
+homeBtn.addEventListener("click", () => {
     if(opened === "about") {
         home.style.visibility = "visible";
         about.style.visibility = "hidden";
         opened = "home";
+        clearInterval(interval);
     }
 });
