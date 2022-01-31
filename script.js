@@ -43,10 +43,11 @@ aboutBtn.addEventListener("click", () => {
                 opacity = 0.4;
                 pyramidDraw(5, 0, 280);
                 level = 0; 
+            } else {
+                opacity = 1;
+                pyramidDraw(level, 0, 280);
+                level++;
             }
-            opacity = 1;
-            pyramidDraw(level, 0, 280);
-            level++;
         }, 1000);
     }
 });
